@@ -125,8 +125,12 @@ if select_filter:
                 st.write(f"{rec_movies[i]['overview']}")
                 st.text(f"Raiting: {round(float(rec_movies[i]['score']),2)}")
                 st.progress(float(rec_movies[i]['score'])/10)
-
-
+footer_html = """
+<footer style='margin-top: 50px; text-align: center;'>
+    <p style='font-size:30px;'><i> Made By Daamini Batra</i> </p>
+</footer>
+"""
+st.markdown(footer_html, unsafe_allow_html=True)
 
 
 
