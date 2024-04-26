@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
+import zipfile
 
 
 def fetch_poster(movie_id):
@@ -67,6 +68,8 @@ def recommend(option):
 movie_dict=pickle.load(open('movie_dict2.pkl','rb'))
 movies = pd.DataFrame(movie_dict)
 
+with zipfile.ZipFile("similarity2.pkl.zip") as f:
+    f.extractall()
 similarity=pickle.load(open('similarity2.pkl','rb'))
 
 unique_genres=pickle.load(open('unique_genres2.pkl','rb'))
