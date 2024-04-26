@@ -3,6 +3,7 @@ import pickle
 import pandas as pd
 import requests
 import zipfile
+import os
 
 
 def fetch_poster(movie_id):
@@ -68,9 +69,13 @@ def recommend(option):
 movie_dict=pickle.load(open('movie_dict2.pkl','rb'))
 movies = pd.DataFrame(movie_dict)
 
-with zipfile.ZipFile("similarity2.pkl.zip") as f:
-    f.extractall()
-similarity=pickle.load(open('similarity2.pkl','rb'))
+path='similarity2.pkl.zip'
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall('extracted_files')
+
+extracted_pickle_file = os.path.join('extracted_files', 'similarity2.pkl')
+with open(extracted_pickle_file, 'rb') as file:
+    similarity = pickle.load(file)
 
 unique_genres=pickle.load(open('unique_genres2.pkl','rb'))
 
