@@ -69,7 +69,7 @@ def recommend(option):
 movie_dict=pickle.load(open('movie_dict2.pkl','rb'))
 movies = pd.DataFrame(movie_dict)
 
-path='similarity2.pkl.zip'
+zip_file_path='similarity2.pkl.zip'
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall('extracted_files')
 
