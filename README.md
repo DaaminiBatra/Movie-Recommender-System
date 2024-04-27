@@ -7,7 +7,7 @@ This movie recommender system is built using Python and utilizes the TMDB 5000 M
 
 ## Dependencies
 - Python 3.x
-- **Libraries & Modules:** pandas, matplotlib, ast(Abstract Syntax Tree), NLTK (natural language Toolkit), sklearn, pickle, pickle, streamlit, requests
+- **Libraries & Modules:** pandas, matplotlib, ast(Abstract Syntax Tree), NLTK (natural language Toolkit), sklearn, pickle, streamlit, requests
 
 ## Features
 - **Demographic Filtering:** Recommends popular and highly rated movies.
